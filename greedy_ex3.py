@@ -1,6 +1,5 @@
 # 1이 될 때까지 (그리디 문제)
-import sys
-n, k = map(int, sys.stdin.readline().split())
+n, k = map(int, input().split())
 
 count = 0
 
@@ -12,6 +11,10 @@ while True:
     n = new_n
     
     if n < k:
-        break
-    
+        break    
+    count += 1
+    n = n // k
+
+count += (n - 1)
+
 print(count)
