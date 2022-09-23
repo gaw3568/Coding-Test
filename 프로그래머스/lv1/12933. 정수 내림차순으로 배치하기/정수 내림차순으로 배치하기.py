@@ -5,3 +5,10 @@ def solution(x):
     for i in num_list:
         answer += str(i)
     return int(answer)
+
+"""
+def solution(x):
+    answer = list(str(x))
+    answer.sort(reverse=True)
+    return int("".join(answer))
+"""
