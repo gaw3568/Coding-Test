@@ -6,3 +6,7 @@ def solution(price, money, count):
         return 0
     else:
         return total_sum - money
+
+def solution_2(price, money, count):
+    result = price * ((count * (count + 1)) // 2) - money
+    return max(0,result)
