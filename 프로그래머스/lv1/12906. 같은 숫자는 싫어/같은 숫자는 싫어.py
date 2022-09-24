@@ -7,3 +7,13 @@ def solution(arr):
             answer.append(arr[i])
     # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
     return answer
+
+"""
+<다른 방법>
+def no_continuous(s):
+    a = []
+    for i in s:
+        if a[-1:] == [i]: continue
+        a.append(i)
+    return a
+"""
