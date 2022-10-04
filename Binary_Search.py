@@ -1,5 +1,22 @@
 import sys
 
+"""
+재귀를 이용한 이진 탐색 코드 구현
+
+def binary_search_recursive(num_list, find_num, start, end):
+    if start > end:
+        return None
+    mid = (start + end) // 2
+
+    if num_list[mid] == find_num:
+        return mid
+    elif num_list[mid] > find_num:
+        return binary_search_recursive(num_list, find_num, start, mid - 1)
+    else:
+        return binary_search_recursive(num_list, find_num, mid + 1, end)
+"""
+
+
 def find_binary_search(num_list, find_num, start, end):
     while start <= end:
         mid = (start + end) // 2
