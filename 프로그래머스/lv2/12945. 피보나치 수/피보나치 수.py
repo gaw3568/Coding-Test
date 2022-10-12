@@ -1,5 +1,5 @@
 def solution(n):
-    fibo_num = []
+    fibo_num = [] * 100001
     for i in range(n + 1):
         if i == 0 or i == 1:
             fibo_num.append(i)
