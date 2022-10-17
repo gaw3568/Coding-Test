@@ -1,5 +1,3 @@
+from math import gcd
 def solution(n):
-    piece = 6
-    while piece % n != 0:
-        piece += 6
-    return piece // 6
+    return (n * 6) // gcd(n,6) // 6
