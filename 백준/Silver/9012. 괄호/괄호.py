@@ -1,17 +1,19 @@
-import sys
-N = int(sys.stdin.readline().strip())
-for _ in range(N):
-    cnt = 0
-    str = sys.stdin.readline().strip()
-    
-    for i in str:
-        if i == "(":
-            cnt += 1
+T = int(input())
+
+for _ in range(T):
+    list_a = []
+    check_str = input()
+
+    for ch in check_str:
+        if ch == '(':
+            list_a.append(ch)
         else:
-            cnt -= 1
-        if cnt < 0:
-            break
-    if cnt == 0:
-        print("YES")
-    else:
+            if not list_a:
+                list_a.append(ch)
+                break
+            list_a.pop()
+
+    if list_a:
         print("NO")
+    else:
+        print("YES")
