@@ -1,10 +1,14 @@
 from collections import deque
-N = int(input())
-new_list = deque([x for x in range(1, N + 1)])
 
-while True:
-    if len(new_list) == 1:
-        print(new_list[0])
+N = int(input())
+
+card_list = deque([num for num in range(1, N+1)])
+
+while card_list:
+    if len(card_list) == 1:
         break
-    new_list.popleft()
-    new_list.append(new_list.popleft())
+    card_list.popleft()
+    pop_item = card_list.popleft()
+    card_list.append(pop_item)
+
+print(card_list[0])
