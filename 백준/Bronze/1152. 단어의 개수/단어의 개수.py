@@ -1,2 +1,5 @@
-str_ = input().split()
-print(len(str_))
+sentence = input()
+word_list = sentence.strip().split()
+
+print(len(word_list))
+    
