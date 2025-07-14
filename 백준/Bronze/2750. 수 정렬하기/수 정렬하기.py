@@ -1,10 +1,12 @@
-n = int(input())
-data = []
+N = int(input())
 
-for i in range(n):
-    data.append(int(input()))
+number_list = []
+
+for _ in range(N):
+    num = int(input())
+    number_list.append(num)
     
-data_new = sorted(data)
+number_list.sort()
 
-for i in range(len(data_new)):
-    print(data_new[i])
+for number in number_list:
+    print(number)
